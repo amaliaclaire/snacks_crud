@@ -1,0 +1,27 @@
+<form method="POST" action="/snacks/{{snack.id}}?_method=PUT" class="well">
+  <div>Edit Here {{snack.name}}</div>
+  <div class="form-group">
+    <label for="name">Name</label> <input id="name" name="name"type="text" class="form-control" value="{{snack.name}}">
+  </div>
+  <div class="form-group">
+    <label for="image">Image URL</label> <input id="image-url" name="poster-url" type="text" class="form-control" value="{{snack.image_url}}">
+  </div>
+
+  <div class="form-group">
+    <label for="review-description">Review Description</label> <input id="review-description" name="review-description" type="text" class="form-control" value="{{snack.review_description}}">
+  </div>
+  <div class="form-group">
+    <label for="item">My Rating</label> <input id="my-rating" name="my-rating" type="number" class="form-control" min="1" max="5" value="{{snack.my_rating}}">
+  </div>
+
+
+
+  <div class="form-group-edit">
+    <input id="submit-edit" type="submit" name="edit-page">
+  </div>
+
+</form>
+
+<script src="/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+<script src="/js/requests.js" charset="utf-8"></script>
+<script type="text/javascript">

@@ -1,0 +1,41 @@
+<h1>{{title}}</h1>
+<a href='/'> Homepage</a>
+<p>Snacks Homepage</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>image</th>
+      <th>review description</th>
+      <th>rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each snacks}}
+    <tr>
+      <td>{{id}}</td>
+      <td><a href="/snacks/{{this.id}}">{{name}}</a></td>
+      <td><img height='150' width='100' src="{{image_url}}"></td>
+      <td>{{review_description}}</td>
+      <!-- <td>{{edit}}">edit</td> -->
+      <td>{{my_rating}}</td>
+      <td>  <form action="/snacks/{{this.id}}?_method=DELETE" method="POST">
+          <input class="btn btn-sm btn-danger" type="submit" name="delete" value="Delete Snack">
+        </form>
+        <form action="/snacks/{{this.id}}/edits" method="PUT">
+            <input class="btn btn-sm btn-danger"
+            type="submit"
+            name="edit"
+            value="edit Snacks">
+
+        </form>
+      </td>
+
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<br>
+<a href="/">Return to home page</a>

@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<a href='/'> Homepage</a>
+<p>ONE Snack Homepage</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>image</th>
+      <th>review description</th>
+      <th>rating</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>{{snack.id}}</td>
+      <td><a href="snack/{{name}}">{{snack.name}}</a></td>
+      <td><img height='150' width='100' src="{{snack.image_url}}"></td>
+      <td>{{snack.review_description}}</td>
+      <!-- <td><a href="snack/{{edit}}">edit</a></td> -->
+      <td>{{snack.my_rating}}</td>
+
+
+    </tr>
+  </tbody>
+</table>
+<br>
+<a href="/">Return to home page</a>
