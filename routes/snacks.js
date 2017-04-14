@@ -55,7 +55,7 @@ router.post('/', (req, res, next)=>{
       console.log(newSnack);
       var id = newSnack[0].id
 
-      res.redirect('/snacks/' + id)
+      res.redirect('/snacks/' + id) 
     })
   }
 })
